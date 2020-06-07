@@ -20,7 +20,7 @@
    <link rel="stylesheet" href="css/base.css">  
    <link rel="stylesheet" href="css/main.css">
    <link rel="stylesheet" href="css/vendor.css">     
-
+   
    <!-- script
    ================================================== -->   
 	<script src="js/modernizr.js"></script>
@@ -37,7 +37,7 @@
 	<!-- header 
    ================================================== -->
    <header>   	
-   	<div class="row">
+   	<div class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
 
    		<div class="top-bar">
    			<a class="menu-toggle" href="#"><span>Menu</span></a>
@@ -160,7 +160,7 @@
 				   	<strong>Python</strong>
 				   </li>
 				   <li>
-				   	<div class="progress percent75"><span>75%%</span></div>
+				   	<div class="progress percent75"><span>75%</span></div>
 				   	<strong>Java</strong>
 				   </li>
 				   <li>
@@ -352,29 +352,96 @@
 
 	<!-- project Section
    ================================================== -->
-	<section id="project">
-
-		<div class="row section-intro">
+<!-- 	<section id="project">
+ -->
+	
+<section id="project">  
+	 <div class="row section-intro">
+     <h5 style="font-size: 25px">Projects</h5>
+   	 <h1>Check Out Some of My Works.
+</h1>
+   		</div>
+    <div class="mySlides fade">
+   	<div class="row section-intro">
    		<div class="col-twelve">
 
-   			<h5>project</h5>
-   			<h1>Check Out Some of My Works.</h1>
 
+             <h5>Automated Image Captioning:</h5>
+   			<div class="intro-info">
+                
+   				<img src="images/proj1.jpg" alt="Profile Picture">
+
+   				<p class="lead">Takes image as input and it give its caption as output.It automatically generate the captions using neural network.Combination of CNN and RNN.It uses InceptionV3 pretrained model for feature extraction from image and Glove model for word embedding.Implemented in Python, Keras,tensorflow.
+   				</ul></p>
+   			</div> 
+         <a href="https://github.com/sumitdaroch/image_captioning" target="_blank"><i class="fa fa-github" style="font-size: 35px; color: red" ></i></a></li>
+      			
 
    		</div>   		
-   	</div> 
+   	</div> <!-- /section-intro -->
 
-   	<div class="row project-content">
 
+   	</div>
+
+   </div>
+    <div class="mySlides fade">
+   	<div class="row section-intro">
    		<div class="col-twelve">
 
-  
+            <h5>StudyPlus:</h5>
+   			<div class="intro-info">
 
-   		</div>  <!-- /twelve -->   
+   				<img src="images/proj2.jpg" alt="Profile Picture">
 
-   	</div> <!-- /project-content --> 
+   				<p class="lead">Platform to conduct online examination.Admin can conduct a Quiz in which he/she can create questions and according their marks.He/She can also set the time limit of the test.Frontend is implemented in HTML/CSS,Bootstrap and backend is implemented in php.</p>
+   			</div>  
+   			<a href="https://github.com/sumitdaroch/StudyPlus" target="_blank"><i class="fa fa-github" style="font-size: 35px; color: red"></i></a></li> 			
+
+   		</div>   		
+   	</div> <!-- /section-intro -->
+
+
+
+   	</div>
+
+   </div>
+      <div class="mySlides fade">
+   	<div class="row section-intro">
+   		<div class="col-twelve">
+            <h5>Algo Visualizer: (Working)</h5>
+   			<div class="intro-info">
+
+   				<img src="images/proj3.jpg" alt="Profile Picture">
+
+   				<p class="lead">It give you visualization of sorting algorithms.You need to enters the data then it will give you a visualization of algorithms on that data.It also gives the details of algorithm working in text form and you can also control the speed of transitions.Frontend is implemented in HTML/CSS,Bootstrap and backend is implemented in Javascript.</p>
+   			</div>   			
+   			<a href="https://github.com/sumitdaroch/algo_visualizer" target="_blank"><i class="fa fa-github" style="font-size: 35px; color: red" ></i></a></li> 			
+
+   		</div>   		
+   	</div> <!-- /section-intro -->
+
+
+
+   	</div>
+   </div>
+
+      
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+</section>  
+
+    
+
 		
-	</section> <!-- /project --> 
+	 <!-- /project --> 
 
 
 
@@ -476,6 +543,59 @@
    <script src="js/plugins.js"></script>
    <script src="js/main.js"></script>
 
+
+<script>
+var slideIndex = 1;
+
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+<script>
+var slideIndex1 = 0;
+showSlides1();
+
+function showSlides1() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex1++;
+  if (slideIndex1 > slides.length) {slideIndex1 = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex1-1].style.display = "block";  
+  dots[slideIndex1-1].className += " active";
+  setTimeout(showSlides1, 7000); // Change image every 2 seconds
+}
+</script>
 </body>
 
 </html>
